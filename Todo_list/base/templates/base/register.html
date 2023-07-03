@@ -1,0 +1,19 @@
+
+{% extends 'base/main.html' %}
+{% block content %}
+<div class="header_bar">
+    <h2>Register</h2>
+</div>
+
+
+<form class="task-form" method="post" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="button" type="submit" value="Register">
+    <p>Already have an account <a style="color: rgb(171, 95, 237);"  href="{% url 'login' %}">Login</a></P>
+</form>
+
+
+
+
+{% endblock content %}
